@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SearchCitiesViewContoller.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    SearchCitiesViewContoller *searchView = [SearchCitiesViewContoller new];
+//    UINavigationController *naviCtr = [[UINavigationController alloc] initWithRootViewController:searchView];
+    
+    self.window.rootViewController = searchView;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
